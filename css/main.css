@@ -7,6 +7,22 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'callunalight';
+  src: url('../fonts/calluna-light-webfont.woff2') format('woff2'),
+       url('../fonts/calluna-light-webfont.woff') format('woff');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'callunaregular';
+  src: url('../fonts/calluna-regular-webfont.woff2') format('woff2'),
+       url('../fonts/calluna-regular-webfont.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+
 
 /* Site wide CSS reset */
 * {
@@ -16,6 +32,7 @@
   margin: 0;
   padding: 0;
 }
+
 
 body {
   background-color: #000000;
@@ -41,16 +58,11 @@ body {
 }
 
 .home-bio {
+  font-family: 'Inter';
+  font-size: 1em;
+  font-weight: 200;
   max-width: 340px;
   line-height: 140%;
-}
-
-/* Outer side of nav */
-header {
-  max-width: 100% !important;
-  background-color: #000000;
-  flex-wrap: wrap;
-  margin-bottom: 10rem;
 }
 
 .description-container {
@@ -64,12 +76,19 @@ header {
   transition-duration: 300ms;
 }
 
+/* Outer side of nav */
+header {
+  max-width: 100% !important;
+  background-color: #000000;
+  flex-wrap: wrap;
+}
+
 /* Nav content container. Using flexbox to align items left middle and right on nav using 3 coumn 1 row grid  */
 nav {
   max-width: 1280px;
   margin: 0 auto 0 auto !important;
   padding-top: 2rem;
-  padding-bottom: 8rem;
+  padding-bottom: 4rem;
   padding-left: 2.5rem;
   padding-right: 2.5rem;
   height: 64px;
@@ -96,7 +115,7 @@ nav {
 }
 
 /* Nav text style */
-.nav-text {
+.nav-link {
   font-family: 'Inter';
   font-size: 1em;
   font-weight: 300 !important;
@@ -106,7 +125,7 @@ nav {
   text-decoration: none;
 }
 
-.nav-text:hover {
+.nav-link:hover {
   color: rgb(255, 255, 255) !important;
   opacity: 1 !important;
   text-decoration: none;
@@ -127,6 +146,21 @@ nav {
   padding-right: 2.5rem;
 }
 
+/* A class to set image to display its max width within its container*/
+.image-container {
+  max-width: 100%;
+  padding-bottom: 3rem;
+}
+
+/* Needed an add on class to limit how tall the image can be display for vertial images*/
+.image-vertical {
+  max-height: 800px;
+}
+/* Make very wide images exceed it's parent div's width*/
+.image-wide {
+  max-height: 800px;
+}
+
 /* Set by 6 by 3 grid  */
 .six-three-grid {
    display: grid;
@@ -141,6 +175,7 @@ nav {
   margin: 0 auto !important;
   padding-left: 2.5rem;
   padding-right: 2.5rem;
+  padding-top: 10rem;
 }
 
 .work-item-default-style {
@@ -220,6 +255,10 @@ hr.home-divider {
   margin: 5rem auto 5rem auto;
 }
 
+.exp {
+  text-align: left;
+}
+
 .exp-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -234,6 +273,11 @@ hr.home-divider {
   min-height: 400px;
   grid-area: 1 / 1 / 2 / 2; 
   transition-duration: 300ms;
+}
+
+.exp-description-container {
+  background: rgb(255, 79, 79);
+  max-width: 600px;
 }
 
 .exp-logo { 
@@ -280,16 +324,18 @@ a:visited {
   TEXT ELEMENTS -------------------
 */
 h1 {
-  font-family: 'callunasemibold';
+  font-family: 'Inter';
   font-size: 2.5em;
-  padding-bottom: 1.25rem;
+  padding-bottom: 4rem;
+  font-weight: 500;
 }
 
 h2 {
   font-family: 'Inter';
-  font-size: 1.5em;
-  font-weight: 500;
-  padding-bottom: 0.5rem;
+  font-size: 2em;
+  font-weight: 600;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
 }
 
 h3 {
@@ -304,13 +350,15 @@ h4 {
   font-size: 0.875em;
   font-weight: 600;
   letter-spacing: 0.05em;
-  padding-bottom: 3em;
+  padding-bottom: 2em;
 }
 
 p {
-  font-family: 'Inter', sans-serif;
-  font-size: 1em;
-  font-weight: 200;
+  font-family: 'callunalight';
+  font-size: 1.5em;
+  font-weight: 400;
+  line-height: 140%;
+  padding-bottom: 2rem;
 }
 
 .small-title-white {
@@ -347,7 +395,6 @@ p {
   font-weight: 400 !important;
 }
 
-
 .footer {
   left: 0;
   bottom: 0;
@@ -355,7 +402,6 @@ p {
   padding-bottom: 3rem;
   margin-top: 6rem;
   width: 100%;
-
   background-color: #000000;
   flex-wrap: wrap;
 }
@@ -373,23 +419,37 @@ p {
   display: grid;
   grid-template-columns: repeat(9, 1fr);
   grid-template-rows: 1fr;
-  grid-column-gap: 12px; 
+  grid-column-gap: 12px;
+}
+
+.footer-link {
+  font-family: 'Inter';
+  font-size: 1em;
+  font-weight: 300 !important;
+  letter-spacing: 0.02em;
+  color: #ffffff !important;
+  opacity: 0.5;
+  text-decoration: none;
+  padding: 1rem;
 }
 
 .footer-left {
   display: flex;
   flex-wrap: wrap;
-  grid-area: 1 / 1 / 2 / 5;
+  justify-content: space-between;
+  grid-area: 1 / 1 / 2 / 4;
 }
 
 .footer-middle {
   text-align: center;
-  grid-area: 1 / 5 / 2 / 6;
+  grid-area: 1 / 4 / 2 / 7;
 }
 
 .footer-right {
-  text-align: right;
-  grid-area: 1 / 6 / 2 / 10;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  grid-area: 1 / 7 / 2 / 10;
 }
 
 .footer-text {
@@ -465,14 +525,21 @@ p {
   color: #ffffff;
 }
 
+.white-bg {
+  background-color: #ffffff;
+}
+
 .transparent-white {
   color: rgba(255, 255, 255, 0.86);
 }
 
-.transparent-black {
-  color: rgba(0, 0, 0, 0.86);
+.black-50 {
+  color: rgba(0, 0, 0, 0.5);
 }
 
+.black-80{
+  color: rgba(0, 0, 0, 0.8);
+}
 
 /*
   Text class -------------------
