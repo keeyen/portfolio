@@ -166,14 +166,6 @@ nav {
   max-height: 800px;
 }
 
-/* Make very wide images exceed it's parent div's width, by setting width to full size of viewport and shifting it left 50% and minus of parent container width */
-.image-wide {
-  width: 100vw;
-  position: relative;
-  left: calc(-50vw + 50%);
-  max-height: 800px;
-}
-
 /* Set by 2 by 2 grid  */
 .two-two-grid {
    display: grid;
@@ -567,6 +559,7 @@ p {
 @media (max-width: 560px) {
 
   nav {
+    padding-bottom: 6rem;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
   }
@@ -588,7 +581,6 @@ p {
   }
 
   .home-bio {
-   padding-top: 1rem;
    max-width: 100%;
   }
 
@@ -633,6 +625,33 @@ p {
 
   .footer-link {
     display: block;
+  }
+
+  #logo-text {
+    display: block;
+    padding-bottom: 1rem;
+  }
+
+  .standard-container {
+    max-width: 1080px;
+    margin: 0 auto !important;
+    padding-top: 5rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .footer {
+    padding-top: 0rem; 
+    padding-bottom: 20rem;
+  }
+
+  h1 {
+    font-size: 2em;
+    padding-bottom: 3rem;
+  }
+
+  p {
+    font-size: 1.375em;
   }
 
 }
