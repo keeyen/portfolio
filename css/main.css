@@ -131,6 +131,7 @@ nav {
   color: #ffffff !important;
   opacity: 0.5;
   text-decoration: none;
+  transition-duration: 300ms;
 }
 
 .nav-link:hover {
@@ -368,7 +369,6 @@ p {
   padding-bottom: 2rem;
 }
 
-
 .small-title-white {
   font-size: 1em;
   font-weight: 700;
@@ -410,12 +410,9 @@ p {
   bottom: 0;
   padding-top: 3rem;
   padding-bottom: 3rem;
-  margin-top: 6rem;
+  margin-top: 4rem;
   width: 100%;
   background-color: #000000;
-
-  flex-shrink: 0;
- 
 }
 
 .footer-container {
@@ -426,12 +423,12 @@ p {
   padding-left: 2.5rem;
   padding-right: 2.5rem;
   height: 64px;
+  text-align: center;
   background: #000000;
+}
 
-  display: grid;
-  grid-template-columns: repeat(9, 1fr);
-  grid-template-rows: 1fr;
-  grid-column-gap: 12px;
+.links-container {
+  padding-bottom: 2.5rem;
 }
 
 .footer-link {
@@ -442,38 +439,16 @@ p {
   color: #ffffff !important;
   opacity: 0.5;
   text-decoration: none;
-  padding: 1rem;
+  padding: 1.5rem;
+  transition-duration: 300ms;
 }
 
-.footer-left {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  grid-area: 1 / 1 / 2 / 4;
-}
-
-.footer-middle {
-  text-align: center;
-  grid-area: 1 / 4 / 2 / 7;
-}
-
-.footer-right {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  grid-area: 1 / 7 / 2 / 10;
-}
-
-.footer-text {
-  font-family: 'Inter';
-  font-size: 1em;
-  font-weight: 500 !important;
-  line-height: 2em;
-  color: rgba(0, 0, 0, 0.5) !important;
+.footer-link:hover {
+  color: rgb(255, 255, 255) !important;
+  opacity: 1 !important;
   text-decoration: none;
-  padding-left: 2em;
-  padding-right: 2em;
 }
+
 
 /*
   SYSTEM LEVEL RULES -------------------
@@ -576,7 +551,6 @@ p {
   font-weight: 500;
 }
 
-.
 
 
 /*
@@ -585,9 +559,80 @@ p {
 
 @media (max-width: 640px) {
   
+  
+  
 }
 
 /** CSS For mobile devices **/
-@media (max-width: 380px) {
+@media (max-width: 560px) {
+
+  nav {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  .header-left {
+    display: block;
+    grid-area: 1 / 1 / 2 / 3;
+  }
+
+  .header-right {
+    align-items: flex-start;
+    text-align: left;
+    grid-area: 2 / 1 / 3 / 3;
+  }
+
+  .header-right a {
+    margin-left: 0em;
+    margin-right: 4em;
+  }
+
+  .home-bio {
+   padding-top: 1rem;
+   max-width: 100%;
+  }
+
+  .two-two-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 16px;
+  }
+
+  .wide-container {
+    max-width: 1880px;
+    margin: 0 auto !important;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 12rem;
+  }
+
+  .ifttt { 
+    grid-area: 1 / 1 / 2 / 2;
+  }
+
+  .num { 
+    grid-area: 2 / 1 / 3 / 2;
+  }
+
+  .messenger { 
+    grid-area: 3 / 1 / 4 / 2;
+  }
+
+  .thumbnail-large {
+    max-width: 100%;
+  }
+  
+  .thumbnail-medium {
+    max-width: 90%;
+  }
+  
+  .thumbnail-small {
+    max-width: 60%;
+  }
+
+  .footer-link {
+    display: block;
+  }
 
 }
