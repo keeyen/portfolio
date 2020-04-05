@@ -23,6 +23,14 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'callunasemibold';
+  src: url('calluna-semibold-webfont.woff2') format('woff2'),
+       url('calluna-semibold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 
 /* Site wide CSS reset */
 * {
@@ -156,8 +164,12 @@ nav {
 .image-vertical {
   max-height: 800px;
 }
-/* Make very wide images exceed it's parent div's width*/
+
+/* Make very wide images exceed it's parent div's width, by setting width to full size of viewport and shifting it left 50% and minus of parent container width */
 .image-wide {
+  width: 100vw;
+  position: relative;
+  left: calc(-50vw + 50%);
   max-height: 800px;
 }
 
@@ -361,8 +373,9 @@ p {
   padding-bottom: 2rem;
 }
 
+
 .small-title-white {
-  font-size: 16px;
+  font-size: 1em;
   font-weight: 700;
   letter-spacing: 0.07em;
   padding-right: 0.75rem;
@@ -370,14 +383,15 @@ p {
 }
 
 .small-subtitle-white {
-  font-size: 16px;
+  font-family: 'Inter';
+  font-size: 1em;
   font-weight: 500;
   letter-spacing: 0.06em;
   color: rgba(255, 255, 255, 0.86);
 }
 
 .small-title-black {
-  font-size: 16px;
+  font-size: 1em;
   font-weight: 700;
   letter-spacing: 0.03em;
   padding-right: 0.75rem;
@@ -385,7 +399,8 @@ p {
 }
 
 .small-subtitle-black {
-  font-size: 16px;
+  font-family: 'Inter';
+  font-size: 1em;
   font-weight: 500;
   letter-spacing: 0.01em;
   color: rgba(0, 0, 0, 0.5);
@@ -558,6 +573,13 @@ p {
 .mid-text-width {
   max-width: 600px !important;
 }
+
+.bold {
+  font-family: 'Inter' !important;
+  font-weight: 500;
+}
+
+.
 
 
 /*
