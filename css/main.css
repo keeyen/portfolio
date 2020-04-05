@@ -173,11 +173,11 @@ nav {
   max-height: 800px;
 }
 
-/* Set by 6 by 3 grid  */
-.six-three-grid {
+/* Set by 2 by 2 grid  */
+.two-two-grid {
    display: grid;
-   grid-template-columns: repeat(6, 1fr);
-   grid-template-rows: repeat(3, 1fr);
+   grid-template-columns: repeat(2, 1fr);
+   grid-template-rows: repeat(2, 1fr);
    grid-column-gap: 12px;
    grid-row-gap: 12px;
 }
@@ -199,18 +199,25 @@ nav {
 }
 
 .thumbnail-container {
-  max-width: 40%;
   display: block;
   transition: 0.3s;
 }
 
 .thumbnail-large {
   max-width: 90%;
-  display: block;
 }
 
+.thumbnail-medium {
+  max-width: 68%;
+}
+
+.thumbnail-small {
+  max-width: 30%;
+}
+
+
 .messenger { 
-  grid-area: 1 / 1 / 2 / 3; 
+  grid-area: 2 / 2 / 3 / 3;
 }
 
 .messenger:hover {
@@ -222,7 +229,7 @@ nav {
 }
 
 .ifttt { 
-  grid-area: 1 / 3 / 2 / 7; 
+  grid-area: 1 / 1 / 2 / 3;
 }
 
 .ifttt:hover {
@@ -233,28 +240,16 @@ nav {
   opacity: 1;
 }
 
-.techcrunch { 
-  grid-area: 2 / 1 / 3 / 4; 
-}
-
-.techcrunch:hover { 
-  background-color: #ECC04B;
-}
-
 .num { 
-  grid-area: 2 / 4 / 3 / 7; 
+  grid-area: 2 / 1 / 3 / 2;
 }
 
 .num:hover { 
   background-color: #8EC8FD;
 }
 
-.infin { 
-  grid-area: 3 / 1 / 4 / 5; 
-}
-
-.restocks { 
-  grid-area: 3 / 5 / 4 / 7; 
+.num:hover > .description-container {
+  opacity: 1;
 }
 
 hr.home-divider {
@@ -310,8 +305,7 @@ hr.home-divider {
 }
 
 /* Link color */
-.product-listing-link {
-  color: #000000;
+.div-link {
   text-decoration: none;
 }
 
