@@ -709,4 +709,25 @@ ol, ul {
     font-size: 1.375em;
   }
 
+  .description-container {
+    opacity: 1;
+  }
+  
+  .small-title-black {
+    color: #ffffff;
+  }
+  
+  .small-subtitle-black {
+    color: #ffffff;
+  }
+
+  .small-title-black:hover {
+    color: #000000;
+  }
+  
+  .small-subtitle-black:hover {
+    color: #000000;
+  }
+
+
 }
