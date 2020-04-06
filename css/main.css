@@ -51,6 +51,7 @@ body {
   max-width: 1000px;
   margin: 0 auto !important;
   float: none !important;
+  padding-bottom: 3rem;
 }
 
 #logo-text {
@@ -63,6 +64,14 @@ body {
 
 #logo {
   min-width: 48px;
+}
+
+#logo-text-styleguide {
+  font-family: 'berthold_akzidenz_groteskBdex';
+  color: #ffffff;
+  font-size: 1.25em;
+  text-decoration: none;
+  padding-right: 3rem;
 }
 
 .home-bio {
@@ -175,6 +184,11 @@ nav {
    grid-row-gap: 12px;
 }
 
+.two-two-grid-styleguide {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
 .wide-container {
   max-width: 1880px;
   margin: 0 auto !important;
@@ -208,7 +222,6 @@ nav {
 .thumbnail-small {
   max-width: 40%;
 }
-
 
 .messenger { 
   grid-area: 2 / 2 / 3 / 3;
@@ -304,7 +317,7 @@ hr.home-divider {
 }
 
 a:link {
-  color: #38A6ED;
+  color: rgba(0, 0, 0, 0.8);
   font-weight: 500;
   font-family: 'Inter';
   font-size: 1em;
@@ -332,7 +345,7 @@ h1 {
 
 h2 {
   font-family: 'Inter';
-  font-size: 2em;
+  font-size: 1.75em;
   font-weight: 600;
   padding-bottom: 1rem;
   padding-top: 1rem;
@@ -340,9 +353,8 @@ h2 {
 
 h3 {
   font-family: 'Inter';
-  font-size: 1em;
-  font-weight: 700;
-  letter-spacing: 0.08em;
+  font-size: 1.5em;
+  font-weight: 500;
 }
 
 h4 {
@@ -355,10 +367,22 @@ h4 {
 
 p {
   font-family: 'callunalight';
-  font-size: 1.5em;
+  font-size: 1.375em;
   font-weight: 400;
   line-height: 140%;
   padding-bottom: 2rem;
+}
+
+li {
+  font-family: 'callunalight';
+  font-size: 1.375em;
+  font-weight: 400;
+  line-height: 140%;
+  padding-bottom: 0.75rem;
+}
+
+ol, ul {
+  padding-left: 1.25rem;
 }
 
 .small-title-white {
@@ -441,6 +465,20 @@ p {
   text-decoration: none;
 }
 
+.citation {
+  height: 70vh;
+}
+
+.outer-element {
+  margin-bottom: 2rem;
+  background: #FFFFFF;
+  border-radius: 4px;
+}
+
+.element {
+  padding-bottom: 1rem;
+}
+
 
 /*
   SYSTEM LEVEL RULES -------------------
@@ -467,6 +505,7 @@ p {
 
 .divider {
   border: 0.5px solid #bbb;
+  margin-top: 0.25em;
   margin-bottom: 1.5rem;
 }
 
@@ -508,6 +547,14 @@ p {
   background-color: #ffffff;
 }
 
+.black-bg {
+  background-color: #000000;
+}
+
+.light-grey-bg {
+  background-color: rgb(197, 197, 197);
+}
+
 .transparent-white {
   color: rgba(255, 255, 255, 0.86);
 }
@@ -543,17 +590,24 @@ p {
   font-weight: 500;
 }
 
+.h1-styleguide {
+  padding-bottom: 0rem;
+}
+
+.h3-styleguide {
+  padding-bottom: 1rem;
+
+}
+
+.h4-styleguide {
+  padding-bottom: 1em;
+}
+
 
 
 /*
   Responsive Rules -------------------
 */
-
-@media (max-width: 640px) {
-  
-  
-  
-}
 
 /** CSS For mobile devices **/
 @media (max-width: 560px) {
@@ -591,6 +645,7 @@ p {
     grid-row-gap: 16px;
   }
 
+  
   .wide-container {
     max-width: 1880px;
     margin: 0 auto !important;
